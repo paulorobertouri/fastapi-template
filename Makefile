@@ -1,23 +1,25 @@
 SHELL := /bin/bash
 
+.PHONY: install install-dev run test docker-build docker-test docker-curl-test
+
 install:
-uv sync --no-dev
+	./scripts/ubuntu/install.sh
 
 install-dev:
-uv sync
+	./scripts/ubuntu/install-dev.sh
 
 run:
-uv run python main.py
+	./scripts/ubuntu/run.sh
 
 test:
-uv run pytest --cov --cov-report=term --cov-report=term-missing
+	./scripts/ubuntu/test.sh
 
 docker-build:
-docker build -f docker/build.Dockerfile -t fastapi-template-build .
+	docker build -f docker/build.Dockerfile -t fastapi-template-build .
 
 docker-test:
-docker build -f docker/test.Dockerfile -t fastapi-template-test .
-docker run --rm fastapi-template-test
+	docker build -f docker/test.Dockerfile -t fastapi-template-test .
+	docker run --rm fastapi-template-test
 
 docker-curl-test:
-bash tests/docker/test_with_curl.sh
+	./scripts/ubuntu/docker-curl-test.sh
