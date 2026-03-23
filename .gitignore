@@ -116,3 +116,5 @@ Thumbs.db
 # Misc
 .cache/
 .temp/
+
+pnpm-lock.yaml
