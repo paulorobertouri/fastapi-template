@@ -22,6 +22,7 @@ Modern FastAPI template with clean service boundaries, JWT auth, and tested API 
 ## JWT Contract
 
 Login returns:
+
 - Body: `{"token":"..."}`
 - Header: `Authorization: Bearer <token>`
 - Header: `X-JWT-Token: <token>`
