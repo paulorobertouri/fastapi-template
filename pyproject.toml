@@ -11,6 +11,10 @@ dependencies = [
     "uvicorn[standard]",
 ]
 
+[tool.uv]
+default-groups = ["dev"]
+include = ["app/**"]
+
 [dependency-groups]
 dev = [
     "httpx",
@@ -22,8 +26,7 @@ dev = [
     "ruff",
 ]
 
-[tool.uv]
-default-groups = ["dev"]
+ 
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
