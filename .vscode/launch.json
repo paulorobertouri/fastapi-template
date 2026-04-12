@@ -18,6 +18,15 @@
       "module": "pytest",
       "args": ["tests", "-q"],
       "console": "integratedTerminal"
+    },
+    {
+      "name": "FastAPI: Docker Docs",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "preLaunchTask": "docker:up",
+      "postDebugTask": "docker:down",
+      "url": "http://localhost:8000/docs",
+      "webRoot": "${workspaceFolder}"
     }
   ]
 }
