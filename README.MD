@@ -1,6 +1,6 @@
 # fastapi-template
 
-Modern FastAPI template with clean service boundaries, JWT auth, and tested API flows.
+Production-ready FastAPI template with clean service boundaries, JWT auth, and tested API flows.
 
 ## Stack
 
